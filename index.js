@@ -49,6 +49,7 @@ searchInput.addEventListener("input", () => {
 
 
 function displayBooks(books) {
+  booksContainer.innerHTML = "";
   books.forEach((book) => {
     const bookCard = document.createElement("div");
     bookCard.classList.add("bookCard");
