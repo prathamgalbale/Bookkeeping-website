@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.logo{
+    max-width: 5rem; 
+    max-height: 5rem; 
+    fill: #f4e4ba; 
+    padding-right: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.tabs {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.tab {
+    background-color: #f4e4ba;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 47.5%;
+    transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+    background-color:  #333;
+    color: #fff;
+}
+
+#allBooksTab {
+    border-bottom: 3px solid #333;
+}
+
+
+.searchBar {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+#searchInput {
+    width: 95%;
+    font-size: 20px;
+}
+
+.booksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bookCard {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.bookCard:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.bookCard h3 {
+    margin: 5px 0;
+}
+
+#favoriteIcon {
+    max-height: 1.5rem; 
+    max-width: auto; 
+    fill:grey;
+}
+
+
+
+
+
