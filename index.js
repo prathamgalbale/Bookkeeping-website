@@ -109,6 +109,31 @@ function hideSearchBar() {
 showSearchBar();
 
 
+const modal = document.getElementById("myModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalSummary = document.getElementById("modalSummary");
+const closeModal = document.querySelector(".close");
+
+booksContainer.addEventListener("click", (event) => {
+  const clickedElement = event.target;
+  if (clickedElement.classList.contains("bookCard")) {
+    const bookIndex = Array.from(booksContainer.children).indexOf(clickedElement);
+    const clickedBook = booksData[bookIndex];
+    modalTitle.textContent = clickedBook.title_search;
+    modalSummary.textContent = clickedBook.summary || "Summary not available.";
+    modal.style.display = "block";
+  }
+});
+
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
 
 
